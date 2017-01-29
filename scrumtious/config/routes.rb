@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :views
+  devise_for :users
   # commented below because making pages(controller)#home(route) now root
   # get 'pages/home'
 
