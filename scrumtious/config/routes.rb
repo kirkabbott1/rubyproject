@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # commented below because making pages(controller)#home(route) now root
   # get 'pages/home'
 
+  resources :tasks
+
   root 'pages#home'
 
   get 'about' => 'pages#about'
