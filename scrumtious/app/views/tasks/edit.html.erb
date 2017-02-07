@@ -1,21 +1,4 @@
 <h2>Edit Task</h2>
 
 
-<% if @task.errors.any? %>
-<h4>Oopsies, Something went wrong</h4>
-  <ul>
-    <% @task.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  </ul>
-
-  <% end %>
-<% end %>
-
-<%= simple_form_for (@task) do |f| %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
-<% end %>
-
-<p>
-  <%= link_to 'All Tasks', tasks_path %>
-</p>
+<%= render 'form' %>
