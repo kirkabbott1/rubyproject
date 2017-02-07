@@ -11,6 +11,9 @@
   <body>
     <!-- equals sign after % to show to user -->
     <%= render 'layouts/navbar' %>
+    <% flash.each do |name,msg| %>
+      <%= msg %>
+    <% end %>
     <div class="container">
       <%= yield %>
     </div>
